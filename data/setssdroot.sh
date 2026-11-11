@@ -4,7 +4,7 @@ NVME_DRIVE="/dev/nvme0n1p1"
 CHROOT_PATH="/nvmeroot"
 
 INITBIN=/lib/systemd/systemd
-EXT4_OPT="-o defaults -o errors=remount-ro -o discard"
+EXT4_OPT="-o defaults -o errors=remount-ro"
 
 modprobe ext4
 

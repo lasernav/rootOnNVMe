@@ -2,7 +2,8 @@
 Description=Change rootfs to SSD in M.2 key M slot (nvme0n1p1)
 DefaultDependencies=no
 Conflicts=shutdown.target
-After=systemd-remount-fs.service
+After=systemd-remount-fs.service dev-nvme0n1p1.device
+Requires=dev-nvme0n1p1.device
 Before=local-fs-pre.target local-fs.target shutdown.target
 Wants=local-fs-pre.target
 ConditionPathExists=/dev/nvme0n1p1
